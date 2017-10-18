@@ -19321,6 +19321,9 @@
                 "Call-ID": {
                     "type": "string"
                 },
+                "Control-PID": {
+                    "type": "string"
+                },
                 "Control-Queue": {
                     "type": "string"
                 },
