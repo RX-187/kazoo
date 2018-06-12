@@ -108,7 +108,7 @@ send_cmd(Node, UUID, App, "xferext", Dialplan) ->
                    [{<<"call-command">>, <<"execute">>}
                    ,{<<"execute-app-name">>, kz_term:to_binary(FSApp)}
                    ,{<<"execute-app-arg">>, kz_term:to_binary(Arg)}
-                   ,{<<"execute-app-event-name">>, kz_term:to_binary(App)}
+                   ,{<<"event-uuid-name">>, kz_term:to_binary(App)}
                    ]
                end
                || {K, V} <- Dialplan,
@@ -156,7 +156,7 @@ send_cmd(Node, UUID, App, FSApp, Args) ->
     Result = freeswitch:cmd(Node, UUID, [{<<"call-command">>, <<"execute">>}
                                         ,{<<"execute-app-name">>, kz_term:to_binary(AppName)}
                                         ,{<<"execute-app-arg">>, kz_term:to_binary(Args)}
-                                        ,{<<"execute-app-event-name">>, kz_term:to_binary(App)}
+                                        ,{<<"event-uuid-name">>, kz_term:to_binary(App)}
                                         ]),
     lager:debug("execute result on node ~s(~s)  ~s(~s)  ~s(~s): ~p"
                ,[Node, UUID, App, FSApp, AppName, Args, Result]
@@ -175,7 +175,7 @@ send_cmds(Node, UUID, Cmds) ->
                     [{<<"call-command">>, <<"execute">>}
                     ,{<<"execute-app-name">>, dialplan_application(kz_term:to_binary(AppName))}
                     ,{<<"execute-app-arg">>, kz_term:to_binary(Args)}
-                    ,{<<"execute-app-event-name">>, kz_term:to_binary(App)}
+                    ,{<<"event-uuid-name">>, kz_term:to_binary(App)}
                     ]
                 end || {App, FSApp, Args} <- Cmds],
     Result = freeswitch:cmds(Node, UUID, Commands),
