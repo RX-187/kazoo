@@ -1,1 +1,43 @@
-{"type":"object","required":["Application-Name","Call-ID","Event-Actions"],"properties":{"Insert-At":{"type":"string","enum":["now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Event-Actions":{"type":"object"},"Call-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["event_actions"]}},"description":"AMQP API for dialplan.event_actions","_id":"kapi.dialplan.event_actions","$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "_id": "kapi.dialplan.event_actions",
+    "description": "AMQP API for dialplan.event_actions",
+    "properties": {
+        "Application-Name": {
+            "enum": [
+                "event_actions"
+            ],
+            "type": "string"
+        },
+        "Call-ID": {
+            "type": "string"
+        },
+        "Event-Actions": {
+            "type": "object"
+        },
+        "Event-Category": {
+            "enum": [
+                "call"
+            ],
+            "type": "string"
+        },
+        "Event-Name": {
+            "enum": [
+                "command"
+            ],
+            "type": "string"
+        },
+        "Insert-At": {
+            "enum": [
+                "now"
+            ],
+            "type": "string"
+        }
+    },
+    "required": [
+        "Application-Name",
+        "Call-ID",
+        "Event-Actions"
+    ],
+    "type": "object"
+}
