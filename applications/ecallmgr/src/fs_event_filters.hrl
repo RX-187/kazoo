@@ -2,10 +2,13 @@
 
 -define(FS_GENERATED_EVENT_FILTERS
        ,[<<"Acquired-UUID">>
+        ,<<"Action">>
+        ,<<"Answer-State">>
         ,<<"Application">>
         ,<<"Application-Data">>
         ,<<"Application-Logical-Direction">>
         ,<<"Application-Response">>
+        ,<<"Auth-Realm">>
         ,<<"Bridge-A-Unique-ID">>
         ,<<"Bridge-B-Unique-ID">>
         ,<<"Call-Direction">>
@@ -16,12 +19,15 @@
         ,<<"Caller-Caller-ID-Number">>
         ,<<"Caller-Channel-Created-Time">>
         ,<<"Caller-Destination-Number">>
+        ,<<"Caller-Dialplan">>
         ,<<"Caller-Unique-ID">>
         ,<<"Channel-Call-State">>
         ,<<"Channel-Call-UUID">>
         ,<<"Channel-Name">>
         ,<<"Channel-Presence-ID">>
         ,<<"Channel-State">>
+        ,<<"Conf-Name">>
+        ,<<"Controls">>
         ,<<"DTMF-Digit">>
         ,<<"DTMF-Duration">>
         ,<<"Detected-Fax-Tone">>
@@ -29,8 +35,10 @@
         ,<<"Event-Date-Timestamp">>
         ,<<"Event-Name">>
         ,<<"Event-Subclass">>
+        ,<<"Force-Publish-Event-State">>
         ,<<"FreeSWITCH-Hostname">>
         ,<<"Hangup-Cause">>
+        ,<<"Hunt-Context">>
         ,<<"Hunt-Destination-Number">>
         ,<<"Other-Leg-Call-ID">>
         ,<<"Other-Leg-Callee-ID-Number">>
@@ -41,22 +49,55 @@
         ,<<"Other-Leg-Direction">>
         ,<<"Other-Leg-RDNIS">>
         ,<<"Other-Leg-Unique-ID">>
+        ,<<"Presence-Call-Direction">>
+        ,<<"Publish-Channel-State">>
         ,<<"Record-File-Path">>
         ,<<"Resigning-UUID">>
         ,<<"Switch-Nodename">>
         ,<<"Switch-URI">>
         ,<<"Switch-URL">>
         ,<<"Unique-ID">>
+        ,<<"X-AUTH-IP">>
+        ,<<"X-AUTH-PORT">>
+        ,<<"action">>
         ,<<"att_xfer_replaced_by">>
+        ,<<"conference_name">>
+        ,<<"context">>
+        ,<<"domain">>
+        ,<<"expires">>
+        ,<<"from">>
+        ,<<"from_user">>
         ,<<"intercepted_by">>
+        ,<<"ip">>
         ,<<"kazoo_application_name">>
         ,<<"kazoo_application_response">>
         ,<<"kazoo_event_name">>
+        ,<<"metadata">>
+        ,<<"old_node_channel_uuid">>
+        ,<<"port">>
+        ,<<"profile_name">>
+        ,<<"proto">>
+        ,<<"sip_auth_nonce">>
+        ,<<"sip_auth_realm">>
+        ,<<"sip_auth_response">>
+        ,<<"sip_auth_uri">>
+        ,<<"sip_call_id">>
         ,<<"sip_from_host">>
         ,<<"sip_from_user">>
+        ,<<"sip_request_host">>
+        ,<<"sip_to_host">>
+        ,<<"sip_user_agent">>
+        ,<<"sofia_profile_url">>
+        ,<<"status">>
+        ,<<"technology">>
+        ,<<"to_user">>
+        ,<<"user">>
+        ,<<"variable_Switch-URI">>
+        ,<<"variable_Switch-URL">>
         ,<<"variable_billmsec">>
         ,<<"variable_billsec">>
         ,<<"variable_bridge_hangup_cause">>
+        ,<<"variable_bridge_uuid">>
         ,<<"variable_channel_is_moving">>
         ,<<"variable_collected_digits">>
         ,<<"variable_current_application">>
@@ -100,7 +141,6 @@
         ,<<"variable_loopback_bowout">>
         ,<<"variable_loopback_bowout_on_execute">>
         ,<<"variable_loopback_leg">>
-        ,<<"variable_media_group_id">>
         ,<<"variable_originate_disposition">>
         ,<<"variable_origination_callee_id_name">>
         ,<<"variable_origination_callee_id_number">>
@@ -114,6 +154,8 @@
         ,<<"variable_proto_specific_hangup_cause">>
         ,<<"variable_record_ms">>
         ,<<"variable_record_silence_hits">>
+        ,<<"variable_recovered">>
+        ,<<"variable_refer_uuid">>
         ,<<"variable_rtp_local_sdp_str">>
         ,<<"variable_silence_hits_exhausted">>
         ,<<"variable_sip_auth_realm">>
@@ -122,6 +164,7 @@
         ,<<"variable_sip_from_tag">>
         ,<<"variable_sip_from_uri">>
         ,<<"variable_sip_from_user">>
+        ,<<"variable_sip_invite_domain">>
         ,<<"variable_sip_loopback_req_uri">>
         ,<<"variable_sip_origination_call_uuid">>
         ,<<"variable_sip_refer_to">>
@@ -132,6 +175,7 @@
         ,<<"variable_sip_to_uri">>
         ,<<"variable_sip_to_user">>
         ,<<"variable_sip_user_agent">>
+        ,<<"variable_sofia_profile_url">>
         ,<<"variable_switch_r_sdp">>
         ,<<"variable_transfer_history">>
         ,<<"variable_transfer_to">>

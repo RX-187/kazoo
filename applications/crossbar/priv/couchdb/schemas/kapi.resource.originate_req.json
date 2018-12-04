@@ -19,6 +19,9 @@
         "B-Leg-Events": {
             "type": "string"
         },
+        "Bridge-Actions": {
+            "type": "string"
+        },
         "Call-Restrictions-Enabled": {
             "type": "string"
         },
@@ -163,6 +166,9 @@
             ],
             "type": "string"
         },
+        "Monitor-Early-Media": {
+            "type": "string"
+        },
         "Originate-Immediate": {
             "type": "string"
         },
@@ -182,6 +188,9 @@
             "type": "string"
         },
         "Outbound-Caller-ID-Number": {
+            "type": "string"
+        },
+        "Presence-ID": {
             "type": "string"
         },
         "Ringback": {

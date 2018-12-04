@@ -153,6 +153,9 @@
         "Local-SDP": {
             "type": "string"
         },
+        "Media-Recordings": {
+            "type": "string"
+        },
         "Media-Server": {
             "type": "string"
         },
@@ -184,6 +187,9 @@
             "type": "string"
         },
         "Raw-Application-Name": {
+            "type": "string"
+        },
+        "Recording": {
             "type": "string"
         },
         "Remote-SDP": {

@@ -3,6 +3,9 @@
     "_id": "kapi.sms.message_endpoint_headers",
     "description": "AMQP API for sms.message_endpoint_headers",
     "properties": {
+        "Account-ID": {
+            "type": "string"
+        },
         "Auth-Password": {
             "type": "string"
         },
@@ -55,6 +58,9 @@
             "type": "string"
         },
         "Endpoint-Delay": {
+            "type": "string"
+        },
+        "Endpoint-ID": {
             "type": "string"
         },
         "Endpoint-Options": {

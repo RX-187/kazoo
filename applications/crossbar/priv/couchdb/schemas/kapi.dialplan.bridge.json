@@ -42,6 +42,9 @@
             },
             "type": "array"
         },
+        "Bridge-Actions": {
+            "type": "string"
+        },
         "Call-ID": {
             "type": "string"
         },
@@ -164,6 +167,9 @@
             ],
             "type": "string"
         },
+        "Monitor-Early-Media": {
+            "type": "string"
+        },
         "Outbound-Callee-ID-Name": {
             "type": "string"
         },
@@ -174,6 +180,9 @@
             "type": "string"
         },
         "Outbound-Caller-ID-Number": {
+            "type": "string"
+        },
+        "Presence-ID": {
             "type": "string"
         },
         "Ringback": {
